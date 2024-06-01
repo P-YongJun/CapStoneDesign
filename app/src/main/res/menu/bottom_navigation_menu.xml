@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_gps"
+        android:icon="@drawable/gps"
+        android:title="@string/title_gps" />
+    <item
+        android:id="@+id/navigation_heartrate"
+        android:icon="@drawable/heartrate"
+        android:title="@string/title_heartrate" />
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/home"
+        android:title="@string/title_home" />
+    <item
+        android:id="@+id/navigation_location"
+        android:icon="@drawable/location"
+        android:title="@string/title_location" />
+    <item
+        android:id="@+id/navigation_message"
+        android:title="@string/title_message" />
+</menu>

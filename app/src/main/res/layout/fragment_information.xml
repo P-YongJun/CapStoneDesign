@@ -1,0 +1,81 @@
+<!-- res/layout/activity_main.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SearchActivity">
+
+    <!-- 검색 기능 추가 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/searchInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="검색어 입력"
+            android:inputType="text"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="검색"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:stretchColumns="1">
+
+            <!-- 테이블 헤더 -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="지역명" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="강수량" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="현재 시간" />
+            </TableRow>
+
+            <!-- 데이터 행들이 여기에 추가될 것입니다 -->
+
+        </TableLayout>
+    </ScrollView>
+
+    <!-- 버튼 추가 -->
+    <Button
+        android:id="@+id/toBridgeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="전환" />
+
+</LinearLayout>

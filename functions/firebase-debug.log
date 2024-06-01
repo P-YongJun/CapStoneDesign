@@ -1,0 +1,234 @@
+[debug] [2024-05-29T13:35:51.606Z] ----------------------------------------------------------------------
+[debug] [2024-05-29T13:35:51.608Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ParkYongJun\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2024-05-29T13:35:51.608Z] CLI Version:   13.10.2
+[debug] [2024-05-29T13:35:51.608Z] Platform:      win32
+[debug] [2024-05-29T13:35:51.608Z] Node Version:  v20.14.0
+[debug] [2024-05-29T13:35:51.608Z] Time:          Wed May 29 2024 22:35:51 GMT+0900 (대한민국 표준시)
+[debug] [2024-05-29T13:35:51.609Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-29T13:35:51.664Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-29T13:35:51.665Z] > authorizing via signed-in user (skskdlajek96@gmail.com)
+[debug] [2024-05-29T13:35:51.665Z] [iam] checking project cap2-9df6d for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-05-29T13:35:51.666Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cap2-9df6d:testIamPermissions [none]
+[debug] [2024-05-29T13:35:51.667Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/cap2-9df6d:testIamPermissions x-goog-quota-user=projects/cap2-9df6d
+[debug] [2024-05-29T13:35:51.667Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cap2-9df6d:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-05-29T13:35:52.784Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/cap2-9df6d:testIamPermissions 200
+[debug] [2024-05-29T13:35:52.784Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cap2-9df6d:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-05-29T13:35:52.784Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/cap2-9df6d/serviceAccounts/cap2-9df6d@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-05-29T13:35:52.784Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/cap2-9df6d/serviceAccounts/cap2-9df6d@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-05-29T13:35:54.083Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/cap2-9df6d/serviceAccounts/cap2-9df6d@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-05-29T13:35:54.083Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/cap2-9df6d/serviceAccounts/cap2-9df6d@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'cap2-9df6d'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] +  functions: Finished running predeploy script. 
+[debug] [2024-05-29T13:35:54.882Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cap2-9df6d [none]
+[debug] [2024-05-29T13:35:55.313Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cap2-9df6d 200
+[debug] [2024-05-29T13:35:55.313Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cap2-9df6d {"projectId":"cap2-9df6d","projectNumber":"674622754659","displayName":"Cap2","name":"projects/cap2-9df6d","resources":{"hostingSite":"cap2-9df6d"},"state":"ACTIVE","etag":"1_e98066b1-fdb3-4fc5-ada1-2489d2006487"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2024-05-29T13:35:55.315Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/cap2-9df6d/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-05-29T13:35:55.315Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/cap2-9df6d/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/cap2-9df6d
+[debug] [2024-05-29T13:35:55.315Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/cap2-9df6d/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-05-29T13:35:55.316Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/cap2-9df6d/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/cap2-9df6d
+[debug] [2024-05-29T13:35:55.316Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/cap2-9df6d/services/cloudbuild.googleapis.com [none]
+[debug] [2024-05-29T13:35:55.316Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/cap2-9df6d/services/cloudbuild.googleapis.com x-goog-quota-user=projects/cap2-9df6d
+[debug] [2024-05-29T13:35:55.317Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/cap2-9df6d/services/artifactregistry.googleapis.com [none]
+[debug] [2024-05-29T13:35:55.317Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/cap2-9df6d/services/artifactregistry.googleapis.com x-goog-quota-user=projects/cap2-9df6d
+[debug] [2024-05-29T13:35:56.729Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/cap2-9df6d/services/runtimeconfig.googleapis.com 200
+[debug] [2024-05-29T13:35:56.730Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/cap2-9df6d/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-05-29T13:35:56.736Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/cap2-9df6d/services/cloudbuild.googleapis.com 200
+[debug] [2024-05-29T13:35:56.736Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/cap2-9df6d/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2024-05-29T13:35:56.744Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/cap2-9df6d/services/artifactregistry.googleapis.com 200
+[debug] [2024-05-29T13:35:56.745Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/cap2-9df6d/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2024-05-29T13:35:56.756Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/cap2-9df6d/services/cloudfunctions.googleapis.com 200
+[debug] [2024-05-29T13:35:56.757Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/cap2-9df6d/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2024-05-29T13:35:56.757Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cap2-9df6d/adminSdkConfig [none]
+[debug] [2024-05-29T13:35:57.044Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cap2-9df6d/adminSdkConfig 200
+[debug] [2024-05-29T13:35:57.044Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cap2-9df6d/adminSdkConfig {"projectId":"cap2-9df6d","storageBucket":"cap2-9df6d.appspot.com"}
+[debug] [2024-05-29T13:35:57.045Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/cap2-9df6d/configs [none]
+[debug] [2024-05-29T13:35:57.591Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/cap2-9df6d/configs 200
+[debug] [2024-05-29T13:35:57.592Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/cap2-9df6d/configs {}
+[debug] [2024-05-29T13:35:57.593Z] Validating nodejs source
+[debug] [2024-05-29T13:35:58.396Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@eslint/compat": "^1.0.1",
+    "@eslint/js": "^9.3.0",
+    "eslint": "^9.3.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.34.2",
+    "firebase-functions-test": "^3.1.0",
+    "globals": "^15.3.0"
+  },
+  "private": true
+}
+[debug] [2024-05-29T13:35:58.396Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2024-05-29T13:35:58.397Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-05-29T13:35:58.402Z] Found firebase-functions binary at 'C:\Capstone\Capstone\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8148
+
+[debug] [2024-05-29T13:35:58.721Z] Got response from /__/functions.yaml {"endpoints":{"sendFCMOnRainChange":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.update","eventFilters":{"resource":"projects/cap2-9df6d/databases/(default)/documents/rain/{date}/data/{address}/accRain"},"retry":false},"labels":{},"entryPoint":"sendFCMOnRainChange"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged C:\Capstone\Capstone\functions (86.46 KB) for uploading 
+[debug] [2024-05-29T13:36:03.776Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/cap2-9df6d/locations/-/functions [none]
+[debug] [2024-05-29T13:36:04.515Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/cap2-9df6d/locations/-/functions 200
+[debug] [2024-05-29T13:36:04.515Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/cap2-9df6d/locations/-/functions {}
+[debug] [2024-05-29T13:36:04.516Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/cap2-9df6d/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2024-05-29T13:36:05.863Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/cap2-9df6d/locations/-/functions 200
+[debug] [2024-05-29T13:36:05.863Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/cap2-9df6d/locations/-/functions {}
+[debug] [2024-05-29T13:36:05.865Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cap2-9df6d [none]
+[debug] [2024-05-29T13:36:06.292Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cap2-9df6d 200
+[debug] [2024-05-29T13:36:06.293Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cap2-9df6d {"projectId":"cap2-9df6d","projectNumber":"674622754659","displayName":"Cap2","name":"projects/cap2-9df6d","resources":{"hostingSite":"cap2-9df6d"},"state":"ACTIVE","etag":"1_e98066b1-fdb3-4fc5-ada1-2489d2006487"}
+[debug] [2024-05-29T13:36:06.293Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/cap2-9df6d/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2024-05-29T13:36:06.294Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/cap2-9df6d/locations/us-central1/functions:generateUploadUrl {}
+[debug] [2024-05-29T13:36:07.034Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/cap2-9df6d/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2024-05-29T13:36:07.035Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/cap2-9df6d/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/uploads-652287626256.us-central1.cloudfunctions.appspot.com/22b2a8ea-2d46-4983-af01-7ff84d30d57b.zip?GoogleAccessId=service-674622754659@gcf-admin-robot.iam.gserviceaccount.com&Expires=1716991566&Signature=rUdcji%2FzSA1%2FSswGuNjoUbf49LRyK%2Fg4t3p5KDXTPV2fJasrSVKxTEOLh7U6mIDkWpPKIyQq%2FOSQJfcAVyC40PQrhwb%2Fncvl0f20qVpxRXXrq8RtDHaYYvyImvWFZWg4R8ZECo9gb16gd8waej674wDHAvjpo51qGoQYFv3QadpaRuMn6n1yem530tWqHvJS2Y7uPhTlKDh10T7J%2BoApTYh8qhw4GP5MCHlQl%2Bkt%2BrD%2B4RwzuP0DBh1PdM%2BNh0fbpiWHng4w%2FG3yIzH2v0PEpeBu7bmcwCa9uHcCndo4ZKt%2F9x81HzVF7iIQvi0%2BhMUQ0AIWpkCee0JXZQ%2BNA2vbUw%3D%3D"}
+[debug] [2024-05-29T13:36:07.035Z] >>> [apiv2][query] PUT https://storage.googleapis.com/uploads-652287626256.us-central1.cloudfunctions.appspot.com/22b2a8ea-2d46-4983-af01-7ff84d30d57b.zip GoogleAccessId=service-674622754659%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1716991566&Signature=rUdcji%2FzSA1%2FSswGuNjoUbf49LRyK%2Fg4t3p5KDXTPV2fJasrSVKxTEOLh7U6mIDkWpPKIyQq%2FOSQJfcAVyC40PQrhwb%2Fncvl0f20qVpxRXXrq8RtDHaYYvyImvWFZWg4R8ZECo9gb16gd8waej674wDHAvjpo51qGoQYFv3QadpaRuMn6n1yem530tWqHvJS2Y7uPhTlKDh10T7J%2BoApTYh8qhw4GP5MCHlQl%2Bkt%2BrD%2B4RwzuP0DBh1PdM%2BNh0fbpiWHng4w%2FG3yIzH2v0PEpeBu7bmcwCa9uHcCndo4ZKt%2F9x81HzVF7iIQvi0%2BhMUQ0AIWpkCee0JXZQ%2BNA2vbUw%3D%3D
+[debug] [2024-05-29T13:36:07.035Z] >>> [apiv2][body] PUT https://storage.googleapis.com/uploads-652287626256.us-central1.cloudfunctions.appspot.com/22b2a8ea-2d46-4983-af01-7ff84d30d57b.zip [stream]
+[debug] [2024-05-29T13:36:07.803Z] <<< [apiv2][status] PUT https://storage.googleapis.com/uploads-652287626256.us-central1.cloudfunctions.appspot.com/22b2a8ea-2d46-4983-af01-7ff84d30d57b.zip 200
+[debug] [2024-05-29T13:36:07.803Z] <<< [apiv2][body] PUT https://storage.googleapis.com/uploads-652287626256.us-central1.cloudfunctions.appspot.com/22b2a8ea-2d46-4983-af01-7ff84d30d57b.zip [omitted]
+[info] +  functions: functions folder uploaded successfully 
+[info] i  functions: creating Node.js 18 (1st Gen) function sendFCMOnRainChange(us-central1)... 
+[debug] [2024-05-29T13:36:07.806Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/cap2-9df6d/locations/us-central1/functions [none]
+[debug] [2024-05-29T13:36:07.806Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/cap2-9df6d/locations/us-central1/functions {"name":"projects/cap2-9df6d/locations/us-central1/functions/sendFCMOnRainChange","sourceUploadUrl":"https://storage.googleapis.com/uploads-652287626256.us-central1.cloudfunctions.appspot.com/22b2a8ea-2d46-4983-af01-7ff84d30d57b.zip?GoogleAccessId=service-674622754659@gcf-admin-robot.iam.gserviceaccount.com&Expires=1716991566&Signature=rUdcji%2FzSA1%2FSswGuNjoUbf49LRyK%2Fg4t3p5KDXTPV2fJasrSVKxTEOLh7U6mIDkWpPKIyQq%2FOSQJfcAVyC40PQrhwb%2Fncvl0f20qVpxRXXrq8RtDHaYYvyImvWFZWg4R8ZECo9gb16gd8waej674wDHAvjpo51qGoQYFv3QadpaRuMn6n1yem530tWqHvJS2Y7uPhTlKDh10T7J%2BoApTYh8qhw4GP5MCHlQl%2Bkt%2BrD%2B4RwzuP0DBh1PdM%2BNh0fbpiWHng4w%2FG3yIzH2v0PEpeBu7bmcwCa9uHcCndo4ZKt%2F9x81HzVF7iIQvi0%2BhMUQ0AIWpkCee0JXZQ%2BNA2vbUw%3D%3D","entryPoint":"sendFCMOnRainChange","runtime":"nodejs18","dockerRegistry":"ARTIFACT_REGISTRY","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"42256dad4dd3f321c5586494ab60ead11893787c"},"eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.update","resource":"projects/cap2-9df6d/databases/(default)/documents/rain/{date}/data/{address}/accRain"},"minInstances":null,"maxInstances":null,"ingressSettings":null,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"cap2-9df6d\",\"storageBucket\":\"cap2-9df6d.appspot.com\"}","GCLOUD_PROJECT":"cap2-9df6d","EVENTARC_CLOUD_EVENT_SOURCE":"projects/cap2-9df6d/locations/us-central1/functions/sendFCMOnRainChange"},"serviceAccountEmail":null,"availableMemoryMb":null,"timeout":null,"vpcConnector":null,"vpcConnectorEgressSettings":null,"buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}}
+[debug] [2024-05-29T13:36:08.259Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/cap2-9df6d/locations/us-central1/functions 400
+[debug] [2024-05-29T13:36:08.259Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/cap2-9df6d/locations/us-central1/functions {"error":{"code":400,"message":"event_trigger: Expected value rain/{date}/data/{address}/accRain to match regular expression [^/]+/[^/]+(/[^/]+/[^/]+)*","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"event_trigger","description":"Expected value rain/{date}/data/{address}/accRain to match regular expression [^/]+/[^/]+(/[^/]+/[^/]+)*"}]}]}}
+[warn] !  functions: failed to create function projects/cap2-9df6d/locations/us-central1/functions/sendFCMOnRainChange 
+[error] Failed to create function projects/cap2-9df6d/locations/us-central1/functions/sendFCMOnRainChange
+[debug] [2024-05-29T13:36:08.264Z] Total Function Deployment time: 456
+[debug] [2024-05-29T13:36:08.264Z] 1 Functions Deployed
+[debug] [2024-05-29T13:36:08.264Z] 1 Functions Errored
+[debug] [2024-05-29T13:36:08.264Z] 0 Function Deployments Aborted
+[debug] [2024-05-29T13:36:08.264Z] Average Function Deployment time: 455
+[info] 
+[info] Functions deploy had errors with the following functions:
+	sendFCMOnRainChange(us-central1)
+[info] i  functions: cleaning up build files... 
+[debug] [2024-05-29T13:36:08.562Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/cap2-9df6d/locations/us-central1/repositories/gcf-artifacts/packages/send_f_c_m_on_rain_change [none]
+[debug] [2024-05-29T13:36:08.562Z] >>> [apiv2][query] GET https://us.gcr.io/v2/cap2-9df6d/gcf/us-central1/tags/list [none]
+[debug] [2024-05-29T13:36:09.098Z] <<< [apiv2][status] GET https://us.gcr.io/v2/cap2-9df6d/gcf/us-central1/tags/list 404
+[debug] [2024-05-29T13:36:09.098Z] <<< [apiv2][body] GET https://us.gcr.io/v2/cap2-9df6d/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-05-29T13:36:09.098Z] Failed docker command with error  HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Not Found","status":404}
+[debug] [2024-05-29T13:36:09.102Z] >>> [apiv2][query] GET https://us.gcr.io/v2/cap2-9df6d/gcf/us-central1/tags/list [none]
+[debug] [2024-05-29T13:36:09.362Z] <<< [apiv2][status] GET https://us.gcr.io/v2/cap2-9df6d/gcf/us-central1/tags/list 404
+[debug] [2024-05-29T13:36:09.362Z] <<< [apiv2][body] GET https://us.gcr.io/v2/cap2-9df6d/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-05-29T13:36:09.363Z] Failed docker command with error  HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Not Found","status":404}
+[debug] [2024-05-29T13:36:09.470Z] >>> [apiv2][query] GET https://us.gcr.io/v2/cap2-9df6d/gcf/us-central1/tags/list [none]
+[debug] [2024-05-29T13:36:09.728Z] <<< [apiv2][status] GET https://us.gcr.io/v2/cap2-9df6d/gcf/us-central1/tags/list 404
+[debug] [2024-05-29T13:36:09.729Z] <<< [apiv2][body] GET https://us.gcr.io/v2/cap2-9df6d/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-05-29T13:36:09.729Z] Failed docker command with error  HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Not Found","status":404}
+[debug] [2024-05-29T13:36:09.890Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/cap2-9df6d/locations/us-central1/repositories/gcf-artifacts/packages/send_f_c_m_on_rain_change 404
+[debug] [2024-05-29T13:36:09.890Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/cap2-9df6d/locations/us-central1/repositories/gcf-artifacts/packages/send_f_c_m_on_rain_change {"error":{"code":404,"message":"Package \"projects/cap2-9df6d/locations/us-central1/repositories/gcf-artifacts/packages/send_f_c_m_on_rain_change\" was not found.","status":"NOT_FOUND"}}
+[warn] !  functions: Unhandled error cleaning up build images. This could result in a small monthly bill if not corrected. You can attempt to delete these images by redeploying or you can delete them manually at https://console.cloud.google.com/gcr/images/cap2-9df6d/us/gcf 
+[debug] [2024-05-29T13:36:09.891Z] Functions deploy failed.
+[debug] [2024-05-29T13:36:09.891Z] {
+  "endpoint": {
+    "id": "sendFCMOnRainChange",
+    "project": "cap2-9df6d",
+    "region": "us-central1",
+    "entryPoint": "sendFCMOnRainChange",
+    "platform": "gcfv1",
+    "runtime": "nodejs18",
+    "eventTrigger": {
+      "eventType": "providers/cloud.firestore/eventTypes/document.update",
+      "retry": false,
+      "eventFilters": {
+        "resource": "projects/cap2-9df6d/databases/(default)/documents/rain/{date}/data/{address}/accRain"
+      }
+    },
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "serviceAccount": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "vpc": null,
+    "environmentVariables": {
+      "FIREBASE_CONFIG": "{\"projectId\":\"cap2-9df6d\",\"storageBucket\":\"cap2-9df6d.appspot.com\"}",
+      "GCLOUD_PROJECT": "cap2-9df6d",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/cap2-9df6d/locations/us-central1/functions/sendFCMOnRainChange"
+    },
+    "codebase": "default",
+    "targetedByOnly": false,
+    "hash": "42256dad4dd3f321c5586494ab60ead11893787c"
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/cap2-9df6d/locations/us-central1/functions/sendFCMOnRainChange"
+    },
+    "exit": 1,
+    "message": "Failed to create function projects/cap2-9df6d/locations/us-central1/functions/sendFCMOnRainChange",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 400,
+            "message": "event_trigger: Expected value rain/{date}/data/{address}/accRain to match regular expression [^/]+/[^/]+(/[^/]+/[^/]+)*",
+            "status": "INVALID_ARGUMENT",
+            "details": [
+              {
+                "@type": "type.googleapis.com/google.rpc.BadRequest",
+                "fieldViolations": [
+                  {
+                    "field": "event_trigger",
+                    "description": "Expected value rain/{date}/data/{address}/accRain to match regular expression [^/]+/[^/]+(/[^/]+/[^/]+)*"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "response": {
+          "statusCode": 400
+        }
+      },
+      "exit": 1,
+      "message": "HTTP Error: 400, event_trigger: Expected value rain/{date}/data/{address}/accRain to match regular expression [^/]+/[^/]+(/[^/]+/[^/]+)*",
+      "status": 400
+    },
+    "status": 400,
+    "code": 400
+  }
+}
+[debug] [2024-05-29T13:36:09.992Z] Error: Failed to create function sendFCMOnRainChange in region us-central1
+    at C:\Users\ParkYongJun\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:52:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Fabricator.createV1Function (C:\Users\ParkYongJun\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:182:32)
+    at async Fabricator.createEndpoint (C:\Users\ParkYongJun\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:134:13)
+    at async handle (C:\Users\ParkYongJun\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:89:17)
+[error] 
+[error] Error: There was an error deploying functions

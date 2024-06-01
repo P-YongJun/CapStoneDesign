@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Safe Guard</string>
+    <string name="title_location">지역 정보</string>
+    <string name="title_heartrate">심박수</string>
+    <string name="title_home">홈</string>
+    <string name="title_gps">GPS</string>
+    <string name="title_message">알림 문자</string>
+
+    <string name="Arduino_Contents"><![CDATA[< 대기 중 >]]></string>
+    <string name="Bluetooth_Status"><![CDATA[<Bluetooth Status>]]></string>
+</resources>

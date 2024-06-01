@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "674622754659",
+    "project_id": "cap2-9df6d",
+    "storage_bucket": "cap2-9df6d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:674622754659:android:8367ac9a283430aa0b4d56",
+        "android_client_info": {
+          "package_name": "com.example.Gps"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-M6xUX3U04rkQmTa_4qvh2k6NxsTFQAk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:674622754659:android:32527bdd1710276a0b4d56",
+        "android_client_info": {
+          "package_name": "com.example.capstone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-M6xUX3U04rkQmTa_4qvh2k6NxsTFQAk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:674622754659:android:e4ffb62aa2759e590b4d56",
+        "android_client_info": {
+          "package_name": "com.example.ui"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-M6xUX3U04rkQmTa_4qvh2k6NxsTFQAk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

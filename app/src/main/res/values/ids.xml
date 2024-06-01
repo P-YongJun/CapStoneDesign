@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="BluetoothStatus" type="id" />
+    <item name="ReadBuffer" type="id" />
+    <item name="on" type="id" />
+    <item name="DiscoverBtn" type="id" />
+    <item name="PairedBtn" type="id" />
+    <item name="devicesListView" type="id" />
+</resources>
